@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo das araras</title>
+    <link rel="icon" href="araradalogo.png" type="image/png">
+    <style>
+
+        .container{
+            /*delimita o tamanho do site*/
+            display: flex; /* usa flexbox */
+            flex-direction: column;/* organiza em coluna */
+            align-items: center;/* centraliza conteúdo */
+            overflow: hidden;/* esconde o que ultrapassar a caixa */
+            height: 667px;/* altura da caixa */
+            width: 1350px; /* largura da caixa */
+            margin: auto;/* centraliza na tela */
+            padding: 20px;/* espaço interno */
+            border-radius: 10px; /* bordas arredondadas */
+            background: none;/* fundo branco */
+        }
+
+        .input{
+            display: flex;
+            width: 300px;
+            height: 30px;
+            padding: 12px; /*espaço dentro da caixa*/
+            font-size: 18px; /*tamanho do texto dentro da caixa*/
+            border-radius: 12px; /*tamanho do texto dentro do proprio input*/
+            border: none; /*define a borda*/
+            border: 2px solid #004aad;
+            outline-color: #004aad;
+            color: white;
+            background-color: #004aad;
+        }
+
+        .centro{
+            display: flex;
+            flex-direction: column; /*um em baixo do outro*/
+            justify-content: center; /*centraliza na vertical*/
+            align-items: center; /*centraliza na horizontal*/
+            gap: 25px; /*espaçamento entre os elemetos*/
+        }
+
+        .centr{
+            display: flex;
+            align-items: center; /*centraliza na horizontal*/
+            gap: 10px; /*espaçamento entre os elemetos*/
+        }
+
+        .botao-top{
+            background: #004aad; /*cor do fundo*/
+            color: white; /*cor do texto*/
+            padding: 12px 50px; /*em cima e em baixo (12) esquerda direita(25)*/
+            border: none; /*remove borda padrao do botao*/
+            border-radius: 30px; /*deixa o botao arrendondado*/
+            font-size: 16px; /*tamanho do texto*/
+            transition: 0.3s; /*suaviza a mudança*/
+            cursor: pointer; /*muda o cursor pra mao quando passa por cima*/
+            text-decoration: none; /*nao aparecer a linha debaixo do texto*/
+            display: inline-block; /*corrije a posição do botão*/
+        }
+
+        .logo{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+
+<body bgcolor="Ivory">
+
+    <div class="container centro">
+
+        <div class="inpu">
+
+            <label for="email">
+                <font color="#004aad" class="centro">
+                    E-mail
+                </font>
+            </label>
+
+            <input type="email" class="input">
+
+            <br>
+
+            <label>
+                <font color="#004aad" class="centro">
+                    Senha
+                </font>
+            </label>
+
+            <input type="password" class="input">
+
+            <br><!-- Caixa de senha do formulari-->
+
+        </div>
+
+        <div class="centr">
+
+            <a href="cadrastro.html" class="botao-top">
+                Cadrastrar
+            </a>
+
+            <a href="inicio.html" class="botao-top">
+                Entrar
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

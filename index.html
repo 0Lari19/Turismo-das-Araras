@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo das araras</title>
+    <link rel="icon" href="araradalogo.png" type="image/png">
+</head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+    }
+    .container{  
+        margin-top: 40px;
+        width: 1500px;
+        height: 670px;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: #3bb371;
+        border-radius:  10px;
+    }
+    .centro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 150px;
+    }
+    .centrohorizontal{
+        display: flex;
+        justify-content: center;
+    }
+    .quadradão{
+        position: relative;
+        margin-top: 70px;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: #004aad;
+        border-radius:  10px;
+        overflow: hidden;
+    }
+    .botaopesquisaredondo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        background-color: #3bb371;
+        color:#ffffee;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .botaopesquisaredond{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        background-color: #004aad;
+        color:#ffffee;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .botaopesquisaredondo img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;/* largura da imagem */
+        height: 70px;/* altura da imagem */
+        object-fit: cover; /* ajusta sem deformar */
+        display: inline-block;/* permite ajustes */
+    }
+    .texto{
+        position: absolute;
+        margin-right: 5px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .quadradotexto{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        background-color: inherit;
+        color: #ffffee;
+        margin-left: -90px;
+        gap: 10px;
+    }
+    .quadradotextotitulo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        line-height: 1;
+    }
+    .titulo{
+        margin: 0;
+        font-size: 18px;
+        line-height: 1.8;
+        font-weight: bold;
+    }   
+    .descrição{
+        margin: 0;
+        font-size: 17px;
+    }
+    .posiçãobotao{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .botao{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        padding: 10px 20px;
+        background-color: inherit;
+        color: #ffffee;
+        background-color:#004aad;
+        border-radius: 30px;
+        gap: 10px;
+        text-decoration: none;
+        border: none;
+    }
+    .botao1{
+        bottom: 690px;
+        right: 900px;
+    }
+    .botao2{
+        bottom: 690px;
+        right: 650px;
+        cursor: pointer;
+    }
+    .botao3{
+        bottom: 690px;
+        right: 560px;
+    }
+    .botao4{
+        bottom: 690px;
+        right: 460px;
+    }
+    .conteinerdomeio{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 150px;
+        margin-left: 90px;
+        width: 850px;
+        height: 250px;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: #ffffee;
+        border-radius: 30px;
+    }
+    .quadradoprincipal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        padding: 20px 20px;
+        font-size: 17px;
+    }
+    .botaopesquiprincipal{
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #004aad;
+        color:#ffffee;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .botaopesquiprincipal_logo{
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #004aad;
+        color:#ffffee;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .botaopesquiprincipal_logo img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* ajusta sem deformar */
+        display: inline-block;/* permite ajustes */
+    }
+    .bottom1{     
+        bottom: 690px;
+        right:300px;
+    }
+    .bottom2{     
+        bottom: 690px;
+        right:250px;
+    }
+    .bottom3{     
+        bottom: 690px;
+        right:200px;
+    }
+    .bottom4{     
+        bottom: 690px;
+        right: 1200px;
+    }
+    .botaopesquiprincipal img{
+        width: 20px;
+        height: 20px;
+        object-fit: cover; /* ajusta sem deformar */
+        display: inline-block;/* permite ajustes */
+    }
+    .containerredondo{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+        bottom: 270px;
+        right: 100px;
+        width: 350px;
+        height: 350px;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-color: inherit;
+        border-radius:  50%;
+        border: 5px solid #004aad;
+    }
+    .containerredondo img{
+        width: 350px;/* largura da imagem */
+        height: 350px;/* altura da imagem */
+        object-fit: cover; /* ajusta sem deformar */
+        display: inline-block;/* permite ajustes */
+    }
+    .botaopsicao{
+        bottom: 220px;
+        right: 1050px;
+    }
+    .botaopsica{
+        bottom: 220px;
+        right: 900px;
+    }
+    .bota{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        padding: 20px 30px;
+        color: #ffffee;
+        background-color:#004aad;
+        border-radius: 30px;
+        gap: 10px;
+        text-decoration: none;
+        border: none;
+    }
+    #slider {
+        border-radius: 20px;
+        object-fit: cover;
+        opacity: 1;
+        transition: opacity 1s ease;
+    }
+    .tituloprincipal{
+        position: absolute;
+        color: white;
+        font-size: 85px;
+        top: 20px;
+        right: 860px;
+        white-space: nowrap;
+    }
+    .titulosecundario{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        width: 300px;
+        height: 40px;
+        color: white;
+        background-color: #004aad;
+        font-size: 35px;
+        margin-top: 22px;
+        right: 1110px;
+        white-space: nowrap;
+        border-radius: 40px;
+    }
+</style>
+<body bgcolor="Ivory">
+    <div class="container">
+        <main class="posiçãobotao">
+            <a href="inicio.html" class="botao botao1">Inicio</a>
+                <select class="botao botao2" onchange="abrirPagina(this.value)">
+                    <option value="">Pontos turísticos</option>
+                    <option value="serradoroncador.html">Serra do Roncador</option>
+                    <option value="aguasquentes.html">Parque das Águas Quentes</option>
+                    <option value="serraazul.html">Parque Estadual da Serra Azul</option>
+                    <option value="portodobae.html">Porto do Baé</option>
+                    <option value="cristoredentor.html">Cristo Redentor</option>
+                    <option value="cachoeiradausina.html">Cachoeira da Usina</option>
+                    <option value="cachoeiradaserra.html">Cachoeira Pé da Serra</option>
+                    <option value="cachoeiraazul.html">Cachoeira Azul</option>
+                    <option value="complexodobateia.html">Complexo do Bateia</option>
+                    <option value="cachoeiradobateia.html">Cachoeira do Bateia</option>
+                    <option value="favodemal.html">Estância Favo de Mel</option>
+                    <option value="caniondosipo.html">Canion do Cipó</option>
+                    <option value="riosaraguaia.html">Praias do Rio Araguaia</option>
+                    <option value="praiadobosque.html">Praia do Bosque</option>
+                    <option value="discoporto.html">Discoporto</option>
+                    <option value="pezinhos.html">Gruta dos Pezinhos</option>
+                    <option value="santuarioararas.html">Santuário das Araras</option>
+                    <option value="trilhadabarra.html">Trilhas da Barra</option>
+                    <option value="mirantedoamor.html">Mirante do Amor</option>
+                    <option value="riogacas.html">Rio Garças</option>
+                    <option value="rioaraguaia.html">Rio Araguaia</option>
+                    <option value="azuldasaguas.html">Azul das Águas</option>
+                    <option value="cachoeiracristal.html">Cachoeira Cristal</option>
+                    <option value="solnascente.html">Cachoeira sol nascente</option>
+                </select>
+            <a href="sobre.html" class="botao botao3">Sobre</a>
+            <a href="" class="botao botao4">Notícias</a>
+            <a href="inicio.html?pesquisa=abrir" class="botaopesquiprincipal bottom1">
+                <img src="lupa.png">
+            </a>
+            <a href="" class="botaopesquiprincipal bottom2">
+                <img src="pessoa.png">
+            </a>
+            <a href="" class="botaopesquiprincipal bottom3">
+                <img src="sino.png">
+            </a>
+            <b class="botaopesquiprincipal_logo bottom4">
+                <img src="araradalogo.png">
+            </b>
+        </main>
+        <main>
+            <div>
+                <p class="tituloprincipal posiçaotitulo">Barra do Garças</p>
+            </div>
+            <div>
+                <p class="titulosecundario">Mato Grosso</p>
+            </div>
+        </main>
+        <main class="conteinerdomeio">
+            <div class="quadradoprincipal">
+                <p>Onde os rios se encontram e os sonhos fluem. Prepare-se para viver uma experiência inesquecível no coração do Brasil! Em Barra do Garças, natureza, aventura e misticismo se encontram em um só lugar. Mergulhe nas águas quentes das fontes naturais, explore cachoeiras escondidas na Serra Azul, contemple paisagens de tirar o fôlego e sinta a energia única de um destino que encanta todos os sentidos.</p>
+            </div>
+        </main>
+        <main>
+            <div class="containerredondo">
+                <img id="slider" src="img1.jpg">
+            </div>
+                <a href="inicio.html" class="bota botaopsicao">
+                    Entrar
+                </a>
+                <a href="login.html" class="bota botaopsica">
+                    Logar
+                </a>
+        </main>
+        <section class="centrohorizontal">
+            <div class="quadradão centro">
+                <a href="" class="botaopesquisaredondo"><div>
+                    <img src="lugar.png" class="botaopesquisaredondo">
+                </div></a>
+                <div class="quadradotexto">
+                    <div class="quadradotextotitulo">
+                        <p class="titulo">Locais próximos</p>
+                        <p class="descrição">Iremos localizar e informar o mais rápido possivel a você.</p>
+                    </div>
+                </div>
+                <a href="" class="botaopesquisaredondo"><div>
+                    <img src="lupa.png" class="botaopesquisaredondo">
+                </div></a>
+                <div class="quadradotexto">
+                    <div class="quadradotextotitulo">
+                        <p class="titulo">Locais procurados</p>
+                        <p class="descrição">Fique sabendo do lugares mais pesquisados para se visitar.</p>
+                    </div>
+                </div>
+                <a href="" class="botaopesquisaredondo"><div>
+                    <img src="estrela.png" class="botaopesquisaredondo">
+                </div></a>
+                <div class="quadradotexto">
+                    <div class="quadradotextotitulo">
+                        <p class="titulo">Locais bonitos</p>
+                        <p class="descrição">informe-se de locais mais bonitos para ir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script>
+        let imagens = [
+            "img1.jpg",
+            "img2.jpg",
+            "imag3.jpg",
+            "img4.jpg",
+        ];
+        let index = 0;
+
+    let slider = document.getElementById("slider");
+    function trocarImagem(){
+        slider.style.opacity = 0;
+        setTimeout(() => {
+            index++;
+            if(index >= imagens.length){
+                index = 0;
+            }
+            slider.src = imagens[index];
+            slider.style.opacity = 1;
+        }, 1000);
+    };
+    setInterval(trocarImagem, 6000);
+    function abrirPagina(pagina){
+    if(pagina != ""){
+        window.location.href = pagina;
+    }
+}
+    </script>
+</body>
+</html>

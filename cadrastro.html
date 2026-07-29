@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo das araras</title>
+    <link rel="icon" href="araradalogo.png" type="image/png">
+</head>
+
+<style>
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        height: 667px;
+        width: 1350px;
+        margin: auto;
+        padding: 20px;
+        border-radius: 10px;
+        background: none;
+    }
+
+    .centro{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .botoes{
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+    .caixa{
+        width: 300px;
+        height: 30px;
+        padding: 12px;
+        font-size: 18px;
+        border-radius: 12px;
+        border: none;
+        border: 2px solid #004aad;
+        outline-color: #004aad;
+        color: rgb(255, 255, 255);
+        background-color: #004aad;
+    }
+
+    .inpu{
+        display: flex;
+        text-align: center;
+        color: rgb(240, 240, 240);
+        gap: 8px;
+    }
+
+    .botao-top{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        top: 4px;
+        background: #004aad;
+        width: 50px;
+        color: rgb(255, 255, 255);
+        padding: 12px 50px;
+        border: none;
+        border-radius: 30px;
+        font-size: 16px;
+        transition: 0.3s;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .cor{
+        display: flex;
+        background: #004aad;
+        align-items: center;
+        text-decoration: none;
+        padding: 5px 5px;
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+        border-radius: 30px;
+        font-size: 14px;
+        transition: 0.3s;
+        border: 2px solid #004aad;
+        outline-color: #004aad;
+    }
+</style>
+<body bgcolor="Ivory">
+<form>
+    <div class="container centro">
+        <label for="text">
+            <font color="#004aad">Nome</font>
+        </label>
+        <input type="text" class="caixa">
+        <label for="email">
+            <font color="#004aad">E-mail</font>
+        </label>
+        <input type="email" class="caixa">
+        <label>
+            <font color="#004aad">Senha</font>
+        </label>
+        <input type="password" name="senha" class="caixa" required>
+        <label>
+            <font color="#004aad">Confirmar senha</font>
+        </label>
+        <input type="password" name="confirmar" class="caixa" required>
+        <div class="botoes">
+            <a href="login.html" class="botao-top">Cadastrar</a>
+
+            <a href="#" class="botao-top"
+            onclick="document.querySelector('form').reset(); return false;">
+                Limpar
+            </a>
+        </div>
+    </div>
+</form>
+</body>
+</html>
