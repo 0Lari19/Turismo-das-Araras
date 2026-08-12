@@ -7,34 +7,34 @@
     <link rel="icon" href="araradalogo.png" type="image/png">
 </head>
 <style>
-    body {
+    .centro{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
     .container{  
-        margin-top: 40px;
-        width: 1500px;
-        height: 670px;
+        display: flex;
+        flex-direction: column;
+        width: 95%;
         overflow: hidden;
         box-sizing: border-box;
         background-color: #3bb371;
         border-radius:  10px;
-    }
-    .centro{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 150px;
+        margin-top: 1%;
+        overflow: hidden;
     }
     .centrohorizontal{
         display: flex;
-        justify-content: center;
+        align-items: center;
+        margin-right: 1%;
     }
     .quadradão{
-        position: relative;
-        margin-top: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin-top: 1%;
         width: 100%;
-        height: 200px;
         overflow: hidden;
         box-sizing: border-box;
         background-color: #004aad;
@@ -67,17 +67,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 70px;/* largura da imagem */
-        height: 70px;/* altura da imagem */
+        width: 85%;/* largura da imagem */
+        height: 85%;/* altura da imagem */
         object-fit: cover; /* ajusta sem deformar */
         display: inline-block;/* permite ajustes */
     }
     .texto{
-        position: absolute;
+        display: flex;
         margin-right: 5px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        font-size: 20%;
     }
     .quadradotexto{
         display: flex;
@@ -85,10 +86,9 @@
         text-align: center;
         width: 150px;
         height: 150px;
-        overflow: hidden;
         background-color: inherit;
         color: #ffffee;
-        margin-left: -90px;
+        margin-left: 0;
         gap: 10px;
     }
     .quadradotextotitulo{
@@ -108,49 +108,42 @@
         margin: 0;
         font-size: 17px;
     }
-    .posiçãobotao{
-        margin-top: 10px;
-        margin-left: 10px;
+    .quadrado_pesquisa{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        height: 10%;
+        background-color: inherit;
+        border-radius: 20px;
+        padding: 0 15px;
+        margin-top: 1%;
+        overflow: hidden;
+        gap: 5%;
+        margin-right: 1%;
     }
     .botao{
         display: flex;
-        position: absolute;
-        flex-direction: column;
         align-items: center;
-        justify-items: center;
+        justify-content: center;
         padding: 10px 20px;
         background-color: inherit;
         color: #ffffee;
         background-color:#004aad;
         border-radius: 30px;
-        gap: 10px;
+        gap: 50%;
         text-decoration: none;
         border: none;
     }
-    .botao1{
-        bottom: 690px;
-        right: 900px;
-    }
-    .botao2{
-        bottom: 690px;
-        right: 650px;
-        cursor: pointer;
-    }
-    .botao3{
-        bottom: 690px;
-        right: 560px;
-    }
-    .botao4{
-        bottom: 690px;
-        right: 460px;
+    .posicaomeio{
+        display: flex;
+        align-items: center;
+        gap: 5%;
+        margin-top: -5%;
     }
     .conteinerdomeio{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 150px;
-        margin-left: 90px;
+        margin-left: 5%;
         width: 850px;
         height: 250px;
         overflow: hidden;
@@ -168,7 +161,6 @@
         font-size: 17px;
     }
     .botaopesquiprincipal{
-        position: absolute;
         width: 35px;
         height: 35px;
         display: flex;
@@ -181,7 +173,7 @@
         overflow: hidden;
     }
     .botaopesquiprincipal_logo{
-        position: absolute;
+        display: flex;
         width: 35px;
         height: 35px;
         display: flex;
@@ -199,22 +191,6 @@
         object-fit: cover; /* ajusta sem deformar */
         display: inline-block;/* permite ajustes */
     }
-    .bottom1{     
-        bottom: 690px;
-        right:300px;
-    }
-    .bottom2{     
-        bottom: 690px;
-        right:250px;
-    }
-    .bottom3{     
-        bottom: 690px;
-        right:200px;
-    }
-    .bottom4{     
-        bottom: 690px;
-        right: 1200px;
-    }
     .botaopesquiprincipal img{
         width: 20px;
         height: 20px;
@@ -222,41 +198,35 @@
         display: inline-block;/* permite ajustes */
     }
     .containerredondo{
-        position: absolute;
         display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
-        bottom: 270px;
-        right: 100px;
-        width: 350px;
-        height: 350px;
+        margin-top: -1%;
+        width: 25%;/* largura da imagem */
+        height: 25%;/* altura da imagem */
+        aspect-ratio: 1;
+        border-radius: 50%;
         overflow: hidden;
         box-sizing: border-box;
         background-color: inherit;
-        border-radius:  50%;
         border: 5px solid #004aad;
     }
     .containerredondo img{
-        width: 350px;/* largura da imagem */
-        height: 350px;/* altura da imagem */
+        width: 100%;/* largura da imagem */
+        height: 100%;/* altura da imagem */
         object-fit: cover; /* ajusta sem deformar */
         display: inline-block;/* permite ajustes */
     }
     .botaopsicao{
-        bottom: 220px;
-        right: 1050px;
-    }
-    .botaopsica{
-        bottom: 220px;
-        right: 900px;
+        display: flex;
+        align-items: center;
+        gap: 2%;
+        margin-top: -2%;
+        margin-left: 30%;
     }
     .bota{
         display: flex;
-        position: absolute;
-        flex-direction: column;
-        align-items: center;
-        justify-items: center;
         padding: 20px 30px;
         color: #ffffee;
         background-color:#004aad;
@@ -272,35 +242,35 @@
         transition: opacity 1s ease;
     }
     .tituloprincipal{
-        position: absolute;
+        display: flex;
         color: white;
         font-size: 85px;
-        top: 20px;
-        right: 860px;
-        white-space: nowrap;
+        margin-top: 2%;
+        margin-left: 5%;
     }
     .titulosecundario{
-        position: absolute;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        text-align: center;
         justify-items: center;
-        width: 300px;
-        height: 40px;
+        flex-direction: column;
+        width: 20%;
+        height: ;
         color: white;
         background-color: #004aad;
         font-size: 35px;
-        margin-top: 22px;
-        right: 1110px;
         white-space: nowrap;
         border-radius: 40px;
+        margin-top: -5%;
+        margin-left: 5%;
     }
 </style>
-<body bgcolor="Ivory">
-    <div class="container">
-        <main class="posiçãobotao">
-            <a href="inicio.html" class="botao botao1">Inicio</a>
-                <select class="botao botao2" onchange="abrirPagina(this.value)">
+<body bgcolor="Ivory" class="centro">
+    <main class="quadrado_pesquisa posiçãobotao">
+            <b class="botaopesquiprincipal_logo">
+                <img src="araradalogo.png">
+            </b>
+            <a href="inicio.html" class="botao">Inicio</a>
+                <select class="botao" onchange="abrirPagina(this.value)">
                     <option value="">Pontos turísticos</option>
                     <option value="serradoroncador.html">Serra do Roncador</option>
                     <option value="aguasquentes.html">Parque das Águas Quentes</option>
@@ -327,47 +297,45 @@
                     <option value="cachoeiracristal.html">Cachoeira Cristal</option>
                     <option value="solnascente.html">Cachoeira sol nascente</option>
                 </select>
-            <a href="sobre.html" class="botao botao3">Sobre</a>
-            <a href="" class="botao botao4">Notícias</a>
-            <a href="inicio.html?pesquisa=abrir" class="botaopesquiprincipal bottom1">
+            <a href="sobre.html" class="botao">Sobre</a>
+            <a href="" class="botao">Notícias</a>
+            <a href="inicio.html?pesquisa=abrir" class="botaopesquiprincipal">
                 <img src="lupa.png">
             </a>
-            <a href="" class="botaopesquiprincipal bottom2">
+            <a href="" class="botaopesquiprincipal">
                 <img src="pessoa.png">
             </a>
-            <a href="" class="botaopesquiprincipal bottom3">
+            <a href="" class="botaopesquiprincipal">
                 <img src="sino.png">
             </a>
-            <b class="botaopesquiprincipal_logo bottom4">
-                <img src="araradalogo.png">
-            </b>
-        </main>
+    </main>
+    <div class="container">
         <main>
             <div>
-                <p class="tituloprincipal posiçaotitulo">Barra do Garças</p>
+                <p class="tituloprincipal">Barra do Garças</p>
             </div>
             <div>
                 <p class="titulosecundario">Mato Grosso</p>
             </div>
         </main>
-        <main class="conteinerdomeio">
-            <div class="quadradoprincipal">
+        <main class="posicaomeio">
+            <div class="conteinerdomeio quadradoprincipal">
                 <p>Onde os rios se encontram e os sonhos fluem. Prepare-se para viver uma experiência inesquecível no coração do Brasil! Em Barra do Garças, natureza, aventura e misticismo se encontram em um só lugar. Mergulhe nas águas quentes das fontes naturais, explore cachoeiras escondidas na Serra Azul, contemple paisagens de tirar o fôlego e sinta a energia única de um destino que encanta todos os sentidos.</p>
             </div>
-        </main>
-        <main>
             <div class="containerredondo">
                 <img id="slider" src="img1.jpg">
             </div>
-                <a href="inicio.html" class="bota botaopsicao">
+        </main>
+        <main class="botaopsicao">
+                <a href="inicio.html" class="bota">
                     Entrar
                 </a>
-                <a href="login.html" class="bota botaopsica">
+                <a href="login.html" class="bota">
                     Logar
                 </a>
         </main>
         <section class="centrohorizontal">
-            <div class="quadradão centro">
+            <div class="quadradão">
                 <a href="" class="botaopesquisaredondo"><div>
                     <img src="lugar.png" class="botaopesquisaredondo">
                 </div></a>
