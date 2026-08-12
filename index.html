@@ -45,7 +45,7 @@
     }
     .botaopesquisaredondo{
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         width: 150px;
         height: 150px;
@@ -57,22 +57,26 @@
     .botaopesquisaredond{
         display: flex;
         justify-content: center;
+        justify-items: center;
         align-items: center;
         width: 150px;
         height: 150px;
-        background-color: #004aad;
+        background-color: #3bb371;
         color:#ffffee;
         border-radius: 50%;
         overflow: hidden;
     }
     .botaopesquisaredondo img{
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+    }
+    .botaopesquisaredondo div{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 85%;/* largura da imagem */
-        height: 85%;/* altura da imagem */
-        object-fit: cover; /* ajusta sem deformar */
-        display: inline-block;/* permite ajustes */
+        width: 100%;
+        height: 100%;
     }
     .texto{
         display: flex;
@@ -338,7 +342,7 @@
         </main>
         <section class="centrohorizontal">
             <div class="quadradão">
-                <a href="" class="botaopesquisaredondo"><div>
+                <a href="" class="botaopesquisaredondo botaopesquisaredond"><div>
                     <img src="lugar.png">
                 </div></a>
                 <div class="quadradotexto">
