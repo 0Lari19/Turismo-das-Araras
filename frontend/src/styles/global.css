@@ -1,0 +1,104 @@
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins');
+  font-display: swap;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  background: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Containers */
+.max-width {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.2s;
+}
+
+.btn-primary {
+  background: #2c7a7b;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #3dd6ae;
+}
+
+.btn-secondary {
+  background: #1a5a5c;
+  color: white;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background: #2c7a7b;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #2c7a7b;
+  color: #2c7a7b;
+}
+
+.btn-outline:hover {
+  background: #2c7a7b;
+  color: white;
+}
+
+/* Colors */
+.cor-verde-escuro { color: #2c7a7b; }
+.cor-verde-claro { color: #3dd6ae; }
+.cor-branco { color: white; }
+.cor-texto { color: #555; }
+.cor-texto-claro { color: #666; }
+.cor-destaque { color: #ffd700; }

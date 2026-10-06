@@ -12,6 +12,7 @@ const errorHandler = require('./middleware/errors');
 const authRoutes = require('./routes/auth.routes');
 const solicitacoesRoutes = require('./routes/solicitacoes.routes');
 const healthRoutes = require('./routes/health.routes');
+const atrativosRoutes = require('./routes/atractivos.routes');
 
 const app = express();
 app.disable('x-powered-by');
@@ -32,6 +33,7 @@ app.get('/api', (req, res) => res.json({ nome: 'Turismo das Araras API', versao:
 app.use('/api/health', healthRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/solicitacoes', solicitacoesRoutes);
+app.use('/api/atrativos', atrativosRoutes);
 
 app.use('/api', (req, res) => res.status(404).json({ erro: { codigo: 'ROTA_NAO_ENCONTRADA', mensagem: 'Rota da API não encontrada.', requestId: req.requestId } }));
 app.use((req, res) => res.status(404).send('Página não encontrada.'));
