@@ -1,24 +1,28 @@
-const { Pool } = require('pg');
+const Database = require('better-sqlite3');
 const env = require('./env');
 
-const pool = new Pool({
-  connectionString: env.databaseUrl,
-  max: 10,
-  connectionTimeoutMillis: 5000,
-  idleTimeoutMillis: 30000,
-  statement_timeout: 10000
-});
+const db = new Database(env.databaseUrl, { readonly: false });
 
-pool.on('error', (err) => {
-  console.error('Erro inesperado no pool PostgreSQL:', err.message);
-});
+db.pragma('journal_mode = WAL');
+db.pragma('synchronous = NORMAL');
 
-async function query(text, params) {
-  return pool.query(text, params);
+const pool = {
+  query: (text, params) => {
+    const stmt = db.prepare(text);
+    return { rows: stmt.all(params) };
+  },
+  execute: (text, params) => {
+    const stmt = db.prepare(text);
+    stmt.run(params);
+    return { rows: [] };
+  },
+  close: () => {
+    db.close();
+  }
+};
+
+function testConnection() {
+  return pool.query('SELECT 1');
 }
 
-async function testConnection() {
-  await pool.query('SELECT 1');
-}
-
-module.exports = { pool, query, testConnection };
+module.exports = { pool, query: pool.query, testConnection };
