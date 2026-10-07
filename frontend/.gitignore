@@ -1,0 +1,12 @@
+# Ignore environment files
+.env*
+# Ignore log files
+*.log
+# Ignore database files
+*.db
+*.sqlite
+*.sqlite3
+# Ignore node_modules
+node_modules/
+# Ignore Vite build outputs
+dist/

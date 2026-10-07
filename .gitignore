@@ -1,0 +1,15 @@
+# Ignore environment files
+.env*
+# Ignore log files
+*.log
+# Ignore database files
+*.db
+*.sqlite
+*.sqlite3
+# Ignore Vite/React build outputs
+dist/
+# Ignore node_modules
+node_modules/
+# Ignore API build/output
+api/dist/
+api/build/
