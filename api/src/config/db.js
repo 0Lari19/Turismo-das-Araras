@@ -1,7 +1,13 @@
 const Database = require('better-sqlite3');
 const env = require('./env');
 
-const db = new Database(env.databaseUrl, { readonly: false });
+let db;
+try {
+  db = new Database(env.databaseUrl, { readonly: false });
+} catch (err) {
+  console.error('Erro ao conectar ao banco de dados SQLite, tentando criar novo...');
+  db = new Database(env.databaseUrl, { readonly: false });
+}
 
 db.pragma('journal_mode = WAL');
 db.pragma('synchronous = NORMAL');
